@@ -26,6 +26,8 @@
   padding: 2.462rem;
   height: 100%;
   place-content: center;
+  position: relative;
+  z-index: -2;
 
   // Set card texts to light or dark depending on background
   & .card_headline,
