@@ -17,3 +17,7 @@
 .prettierignore
 
 node_modules/
+design/
+.vscode/
+.parcel-cache/
+dist/
