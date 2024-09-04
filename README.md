@@ -43,9 +43,9 @@ I'm keen to continue working with both Sass and BEM styling. While it can be ove
 
 ### Useful resources
 
-[Sass Guidelines](https://sass-guidelin.es/#the-7-1-pattern) - Guidelines for using Sass.
-[Kevin Powell Video](https://www.youtube.com/watch?v=wYWf2m_yzBQ&list=PL4-IK0AVhVjMYRhK9vRPatSlb-9r0aKgh) -Helpful youtube series on introducing Sass and parcel.
-[Favourite Jarome blog piece](https://blog.favouritejome.dev/lets-build-a-multi-coloured-card-component-using-sass) - Really helpful blog for the dynamic styling of the cards using Sass, and understanding Sass looping functions.
+[Sass Guidelines](https://sass-guidelin.es/#the-7-1-pattern) - Guidelines for using Sass.  
+[Kevin Powell Video](https://www.youtube.com/watch?v=wYWf2m_yzBQ&list=PL4-IK0AVhVjMYRhK9vRPatSlb-9r0aKgh) -Helpful youtube series on introducing Sass and parcel.  
+[Favourite Jarome blog piece](https://blog.favouritejome.dev/lets-build-a-multi-coloured-card-component-using-sass) - Really helpful blog for the dynamic styling of the cards using Sass, and understanding Sass looping functions.  
 [Kitty Giraudel Sitepoint article](https://www.sitepoint.com/managing-responsive-breakpoints-sass/) - Helped with the breakpoints media queries I used with Sass.
 
 ## Author
