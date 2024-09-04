@@ -1,0 +1,15 @@
+@use "../abstracts/colors" as *;
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+}
+
+p,
+q,
+span {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-stretch: ultra-condensed;
+}

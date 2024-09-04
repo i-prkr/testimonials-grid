@@ -1,0 +1,36 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+$grid-cards: (
+  "1": c1,
+  "2": c2,
+  "3": c3,
+  "4": c4,
+  "5": c5,
+);
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+
+  @include respond-to("medium") {
+    grid-template-areas:
+      "c1 c1"
+      "c2 c4"
+      "c3 c4"
+      "c5 c5";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  @include respond-to("large") {
+    grid-template-areas:
+      "c1 c1 c2 c5"
+      "c3 c4 c4 c5";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}

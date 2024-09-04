@@ -1,0 +1,48 @@
+@use "sass:color";
+
+@use "./breakpoints" as *;
+@use "./colors" as *;
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin card($color) {
+  background-color: $color;
+  border-radius: 0.5em;
+  box-shadow: 40px 60px 50px -47px $light-gray;
+  padding: 2.462rem;
+  height: 100%;
+  place-content: center;
+
+  // Set card texts to light or dark depending on background
+  & .card_headline,
+  span > .card_avatar_name {
+    @if (color.lightness($color) > 60%) {
+      color: $dark-blackish-blue;
+    } @else {
+      color: $white;
+    }
+  }
+
+  & .card_quote,
+  span > .card_avatar_title {
+    @if (color.lightness($color) > 60%) {
+      color: $dark-grayish-blue;
+    } @else {
+      color: $light-gray;
+    }
+  }
+}

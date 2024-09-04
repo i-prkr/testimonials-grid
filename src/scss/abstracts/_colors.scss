@@ -1,0 +1,18 @@
+// Primary
+
+$moderate-violet: hsl(263, 55%, 52%);
+$dark-grayish-blue: hsl(217, 19%, 35%);
+$dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// Neutral
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+$cardBackground: (
+  '1': $moderate-violet,
+  '2': $dark-grayish-blue,
+  '3': $white,
+  '4': $dark-blackish-blue,
+  '5': $white
+);
