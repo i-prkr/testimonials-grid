@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../abstracts/mixins" as *;
 @use "../abstracts/colors" as *;
 @use "../layout/grid" as *;
@@ -6,18 +8,54 @@
   .card:nth-of-type(#{$key}) {
     // Assign background color using card mixin and map
     @include card(map-get($cardBackground, $key));
+  }
+}
 
-    // Change border of avatar photo for come cards as per design
-    & img {
-      @if (map-get($cardBackground, $key) == $dark-blackish-blue) {
-        border-style: solid;
-        border-color: $moderate-violet;
-      }
+.card {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
 
-      @if (map-get($cardBackground, $key) == $moderate-violet) {
-        border-style: solid;
-        border-color: hsl(263, 55%, 70%);
-      }
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 1.05rem;
+  }
+
+  &__photo {
+    border-radius: 50%;
+  }
+
+  &__svg {
+    position: absolute;
+    right: 2rem;
+    z-index: -1;
+  }
+
+  &__headline {
+    font-weight: 600;
+    font-size: 1.538rem;
+    line-height: 2rem;
+  }
+
+  &__title {
+    display: block;
+    margin-top: -0.15rem;
+    font-size: 0.846rem;
+  }
+
+  .border {
+    &-dark-purple {
+      border-style: solid;
+      border-color: $moderate-violet;
+    }
+
+    &-light-purple {
+      border-style: solid;
+      border-color: color.adjust($moderate-violet, $lightness: 15);
     }
   }
 }
@@ -45,39 +83,4 @@
       }
     }
   }
-}
-
-.card_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.card_avatar {
-  display: flex;
-  align-items: center;
-  gap: 1.05rem;
-}
-
-.card_avatar_photo {
-  border-radius: 50%;
-}
-
-.card_svg {
-  position: absolute;
-  right: 2rem;
-  z-index: -1;
-}
-
-.card_headline {
-  font-weight: 600;
-  font-size: 1.538rem;
-  line-height: 2rem;
-}
-
-.card_avatar_title {
-  display: block;
-  margin-top: -0.15rem;
-  font-size: 0.846rem;
 }

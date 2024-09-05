@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Primary
 
 $moderate-violet: hsl(263, 55%, 52%);
@@ -10,9 +12,18 @@ $light-gray: hsl(0, 0%, 81%);
 $light-grayish-blue: hsl(210, 46%, 95%);
 
 $cardBackground: (
-  '1': $moderate-violet,
-  '2': $dark-grayish-blue,
-  '3': $white,
-  '4': $dark-blackish-blue,
-  '5': $white
+  "1": $moderate-violet,
+  "2": $dark-grayish-blue,
+  "3": $white,
+  "4": $dark-blackish-blue,
+  "5": $white,
 );
+
+// set text color based on card background
+@function set-text($bgColor) {
+  $color: $white;
+  @if (color.lightness($bgColor) > 60%) {
+    $color: $dark-grayish-blue;
+  }
+  @return $color;
+}
