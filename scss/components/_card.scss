@@ -56,7 +56,7 @@
 
     &-light-purple {
       border-style: solid;
-      border-color: color.adjust($moderate-violet, $lightness: 15);
+      border-color: color.adjust($moderate-violet, $lightness: 15%);
     }
   }
 }
