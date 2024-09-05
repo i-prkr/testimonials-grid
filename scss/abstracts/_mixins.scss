@@ -1,5 +1,3 @@
-@use "sass:color";
-
 @use "./breakpoints" as *;
 @use "./colors" as *;
 
@@ -21,30 +19,12 @@
 
 @mixin card($color) {
   background-color: $color;
+  color: set-text($color);
   border-radius: 0.5em;
   box-shadow: 40px 60px 50px -47px $light-gray;
+  place-content: center;
   padding: 2.462rem;
   height: 100%;
-  place-content: center;
   position: relative;
   z-index: -2;
-
-  // Set card texts to light or dark depending on background
-  & .card_headline,
-  span > .card_avatar_name {
-    @if (color.lightness($color) > 60%) {
-      color: $dark-blackish-blue;
-    } @else {
-      color: $white;
-    }
-  }
-
-  & .card_quote,
-  span > .card_avatar_title {
-    @if (color.lightness($color) > 60%) {
-      color: $dark-grayish-blue;
-    } @else {
-      color: $light-gray;
-    }
-  }
 }
