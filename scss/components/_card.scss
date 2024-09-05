@@ -4,14 +4,15 @@
 @use "../abstracts/colors" as *;
 @use "../layout/grid" as *;
 
-@each $key, $value in $cardBackground {
-  .card:nth-of-type(#{$key}) {
-    // Assign background color using card mixin and map
-    @include card(map-get($cardBackground, $key));
-  }
-}
-
 .card {
+  border-radius: 0.5em;
+  box-shadow: 40px 60px 50px -47px $light-gray;
+  place-content: center;
+  padding: 2.462rem;
+  height: 100%;
+  position: relative;
+  z-index: -2;
+
   &__container {
     display: flex;
     flex-direction: column;

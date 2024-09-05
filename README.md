@@ -20,7 +20,7 @@
 ### Links
 
 - Solution URL: [Github](https://github.com/i-prkr/testimonials-grid)
-- Live Site URL: [Github Pages](https://i-prkr.github.io/testimonials-grid/)
+- Live Site URL: [Vercel](https://testimonials-grid-bay.vercel.app/)
 
 ## My process
 

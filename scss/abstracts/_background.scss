@@ -1,0 +1,23 @@
+@use "./colors" as *;
+
+.background {
+  &-white {
+    background-color: $white;
+    color: set-text($white);
+  }
+
+  &-purple {
+    background-color: $moderate-violet;
+    color: set-text($moderate-violet);
+  }
+
+  &-greyblue {
+    background-color: $dark-grayish-blue;
+    color: set-text($dark-grayish-blue);
+  }
+
+  &-blackblue {
+    background-color: $dark-blackish-blue;
+    color: set-text($dark-blackish-blue);
+  }
+}

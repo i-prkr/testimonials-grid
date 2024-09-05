@@ -16,15 +16,3 @@
           + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
-
-@mixin card($color) {
-  background-color: $color;
-  color: set-text($color);
-  border-radius: 0.5em;
-  box-shadow: 40px 60px 50px -47px $light-gray;
-  place-content: center;
-  padding: 2.462rem;
-  height: 100%;
-  position: relative;
-  z-index: -2;
-}
